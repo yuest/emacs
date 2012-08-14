@@ -7,7 +7,7 @@
 (add-to-list 'load-path "~/.emacs.d/emacs-color-theme-solarized/")
 (require 'color-theme)
 (require 'color-theme-solarized)
-(color-theme-solarized-light)
+(color-theme-solarized-dark)
 
 ;; https://github.com/thomblake/js3-mode
 ;; don't forget to M-x byte-compile-file RET ~/.emacs.d/js3.el RET
