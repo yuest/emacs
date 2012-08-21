@@ -9,6 +9,20 @@
 (require 'color-theme-solarized)
 (color-theme-solarized-dark)
 
+(when (eq system-type 'darwin)
+  (set-face-attribute
+   'default nil :font "Ubuntu Mono 14")
+
+  ;; Chinese Font
+  (dolist (charset '(kana han symbol cjk-misc bopomofo))
+    (set-fontset-font (frame-parameter nil 'font)
+                      charset
+                      (font-spec :family "Hiragino Sans GB" :size 14))))
+;  (set-fontset-font
+;    (frame-parameter nil 'font)
+;    'han
+;    (font-spec :family "Hiragino Sans GB" )))
+
 ;; https://github.com/thomblake/js3-mode
 ;; don't forget to M-x byte-compile-file RET ~/.emacs.d/js3.el RET
 ;;;Add the following custom-set-variables to use 'lazy' modes
