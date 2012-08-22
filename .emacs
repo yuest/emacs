@@ -20,9 +20,23 @@
 			charset
 			(font-spec :family "Hiragino Sans GB" :size 14)))))
 
+;; Mac 下置换 option 和 command 键
 (when (eq system-type 'darwin)
   (setq mac-command-modifier 'meta)
   (setq mac-option-modifier 'super))
+
+;; 一打开就起用 text 模式。 
+(setq default-major-mode 'text-mode)
+
+;; 语法高亮
+(global-font-lock-mode t)
+
+;; 以 y/n代表 yes/no
+(fset 'yes-or-no-p 'y-or-n-p) 
+
+;; 显示括号匹配 
+(show-paren-mode t)
+(setq show-paren-style 'parentheses)
 
 ;; https://github.com/thomblake/js3-mode
 ;; don't forget to M-x byte-compile-file RET ~/.emacs.d/js3.el RET
