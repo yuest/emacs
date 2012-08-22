@@ -7,3 +7,6 @@
 [submodule "ace-jump-mode"]
 	path = ace-jump-mode
 	url = https://github.com/winterTTr/ace-jump-mode.git
+[submodule "ir_black_emacs"]
+	path = ir_black_emacs
+	url = https://github.com/dz/ir_black_emacs.git

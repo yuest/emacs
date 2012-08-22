@@ -4,24 +4,21 @@
 
 ;; https://github.com/sellout/emacs-color-theme-solarized
 ;; http://www.nongnu.org/color-theme/
-(add-to-list 'load-path "~/.emacs.d/emacs-color-theme-solarized/")
-(require 'color-theme)
-(require 'color-theme-solarized)
-(color-theme-solarized-dark)
+(when (display-graphic-p)
+  (require 'color-theme)
+  (color-theme-initialize)
+  (load-file "~/.emacs.d/color-theme-irblack.el")
+  (color-theme-irblack)
 
-(when (eq system-type 'darwin)
-  (set-face-attribute
-   'default nil :font "Ubuntu Mono 14")
+  (when (eq system-type 'darwin)
+    (set-face-attribute
+     'default nil :font "Ubuntu Mono 14")
 
-  ;; Chinese Font
-  (dolist (charset '(kana han symbol cjk-misc bopomofo))
-    (set-fontset-font (frame-parameter nil 'font)
-                      charset
-                      (font-spec :family "Hiragino Sans GB" :size 14))))
-;  (set-fontset-font
-;    (frame-parameter nil 'font)
-;    'han
-;    (font-spec :family "Hiragino Sans GB" )))
+    ;; Chinese Font
+    (dolist (charset '(kana han symbol cjk-misc bopomofo))
+      (set-fontset-font (frame-parameter nil 'font)
+			charset
+			(font-spec :family "Hiragino Sans GB" :size 14)))))
 
 ;; https://github.com/thomblake/js3-mode
 ;; don't forget to M-x byte-compile-file RET ~/.emacs.d/js3.el RET
