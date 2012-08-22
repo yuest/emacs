@@ -19,6 +19,7 @@
       (set-fontset-font (frame-parameter nil 'font)
 			charset
 			(font-spec :family "Hiragino Sans GB" :size 14)))))
+
 (when (eq system-type 'darwin)
   (setq mac-command-modifier 'control)
   (setq mac-control-modifier 'meta))
