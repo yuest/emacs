@@ -21,7 +21,7 @@
 			(font-spec :family "Hiragino Sans GB" :size 14)))))
 
 (when (eq system-type 'darwin)
-  (setq mac-command-modifier 'meta)
+;;  (setq mac-command-modifier 'meta)
   );;(setq mac-control-modifier 'meta))
 
 ;; https://github.com/thomblake/js3-mode
