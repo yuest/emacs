@@ -40,7 +40,8 @@
 
 ;; 去掉工具栏
 (tool-bar-mode nil)
-
+(when (eq system-type 'darwin)
+  (ns-toggle-toolbar))
 ;; https://github.com/thomblake/js3-mode
 ;; don't forget to M-x byte-compile-file RET ~/.emacs.d/js3.el RET
 ;;;Add the following custom-set-variables to use 'lazy' modes
