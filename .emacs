@@ -21,9 +21,9 @@
 			(font-spec :family "Hiragino Sans GB" :size 14)))))
 
 ;; Mac 下置换 option 和 command 键
-(when (eq system-type 'darwin)
-  (setq mac-command-modifier 'meta)
-  (setq mac-option-modifier 'super))
+;(when (eq system-type 'darwin)
+;  (setq mac-command-modifier 'meta)
+;  (setq mac-option-modifier 'super))
 
 ;; 一打开就起用 text 模式。 
 (setq default-major-mode 'text-mode)
